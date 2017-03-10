@@ -1,0 +1,28 @@
+{# src/ECAM/BlogBundle/Resources/views/Notes/Nonote.html.twig #}
+
+{% extends 'noteBundle::layout.html.twig' %}
+
+{% block title %} <title> Liste de notes </title> {% endblock %}
+
+  {% block note_content %}
+  <div id="header" class="jumbotron" align="center">
+    <h1>Liste de notes</h1>
+  </div>
+  <div class="container">
+      <div class="row">
+        <div class ="well center-block">
+          <form class="form-inline">
+            <div class="form-group">
+
+                  <a role="button" class="btn btn-default btn-lg" href="{{ path('AddNote') }}" >Ajouter une note</a>
+                  <a role="button" class="btn btn-default btn-lg" href="{{ path('AddCategorie') }}">Ajouter une catégorie</a>
+                  <a role="button" class="btn btn-default btn-lg" href="{{ path('ListeCategorie') }}">Liste des catégories</a>
+                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Recherche d'un Tag">
+                </div>
+
+          </form> 
+        </div>
+      </div>
+   </div> 
+
+  {% endblock %}

@@ -1,0 +1,16 @@
+{# src/ECAM/BlogBundle/Resources/views/Notes/AddNote.html.twig #}
+
+{% extends 'noteBundle::layout.html.twig' %}
+
+{% block title %} <title> Ajout d'une note </title> {% endblock %}
+
+  {% block note_content %}
+  <div id="header" class="jumbotron" align="center">
+    <h2>Ajout d'une note</h2>
+  </div>
+
+  <div class="well">
+    {{ form(form) }}
+  </div> 
+  <a role="button" class="btn btn-link" href="{{ path('note') }}"> Retour vers la liste des notes</a>
+  {% endblock %}

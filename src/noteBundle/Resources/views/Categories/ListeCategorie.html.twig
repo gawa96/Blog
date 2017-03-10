@@ -1,0 +1,38 @@
+
+{# src/ECAM/BlogBundle/Resources/views/Categories/ListeCategorie.html.twig #}
+
+{% extends 'noteBundle::layout.html.twig' %}
+
+{% block title %} <title> Liste de notes </title> {% endblock %}
+
+  {% block note_content %}
+  <div id="header" class="jumbotron" align="center">
+    <h1>Liste des categorie</h1>
+  </div>
+  
+  <div class ="container">
+    <table class ="table table-striped">
+    <thead>
+        <tr>
+          <th> Categorie </th>
+          <th> Editer </th>
+          <th> Supprimer </th>
+          </tr>
+    </thead>
+    {% for categorie in cate %}
+    <tbody>
+      <tr>
+        <th>{{categorie.nom}}</th>
+        <th> <a role="button" class="btn btn-link" href="{{ path('EditCate', { 'id': categorie.id }) }}">Modifier</a></th>
+        <th> <a role="button" class="btn btn-link" href="{{ path('SuppCate', { 'id': categorie.id }) }}">Supprimer</a></th>
+         
+    </tbody>
+
+
+    {% endfor %}
+     </table>
+   </div>
+  <div class ="container">
+    <a role="button" class="btn btn-link" href="{{ path('note')}}">retour liste des notes</a>
+  </div>
+  {% endblock %}
